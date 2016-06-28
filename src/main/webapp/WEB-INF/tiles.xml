@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE tiles-definitions PUBLIC  
+      "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
+      "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">  
+<tiles-definitions>  
+ 
+   <!-- Base Define -->
+   <definition name="base.definition" 
+       template="/WEB-INF/layouts/classic.jsp">  
+       <put-attribute name="title" value="" />  
+       <put-attribute name="header" value="/WEB-INF/basefragments/_header.jsp" />  
+       <put-attribute name="menu" value="/WEB-INF/basefragments/_menu.jsp" />  
+       <put-attribute name="body" value="" />  
+       <put-attribute name="footer" value="/WEB-INF/basefragments/_footer.jsp" />  
+   </definition>  
+ 
+   <!-- Home Page -->
+   <definition name="homePage" extends="base.definition">  
+       <put-attribute name="title" value="My Reservations" />  
+       <put-attribute name="body" value="/WEB-INF/bodyfragments/_initial.jsp" />  
+   </definition>  
+      
+   <!-- ContactUs Page -->
+   <definition name="contactusPage" extends="base.definition">  
+       <put-attribute name="title" value="Contact Us" />  
+       <put-attribute name="body" value="/WEB-INF/bodyfragments/_contactus.jsp" />  
+   </definition>  
+   
+   
+      <!-- login Page -->
+   <definition name="login" extends="base.definition">  
+       <put-attribute name="title" value="Log In" />  
+       <put-attribute name="body" value="/WEB-INF/bodyfragments/login.jsp" />  
+   </definition>  
+   
+   <!-- User list -->
+     <definition name="userList" extends="base.definition">  
+       <put-attribute name="title" value="User" />  
+       <put-attribute name="body" value="/WEB-INF/bodyfragments/_users.jsp" />  
+   </definition> 
+   
+     <!-- pagina de autenticacion -->
+     <definition name="autentic" extends="base.definition">  
+       <put-attribute name="title" value="User" />  
+       <put-attribute name="body" value="/WEB-INF/bodyfragments/_info_login.jsp" />  
+   </definition> 
+        <!-- pagina de error -->
+     <definition name="error" extends="base.definition">  
+       <put-attribute name="title" value="Error" />  
+       <put-attribute name="body" value="/WEB-INF/bodyfragments/Error_page.jsp" />  
+   </definition> 
+   
+<!-- pagina de Restaurante -->
+   <definition name="restaurantPage" extends="base.definition">  
+       <put-attribute name="title" value="Error" />  
+       <put-attribute name="body" value="/WEB-INF/bodyfragments/_restaurant.jsp" />  
+   </definition> 
+   
+   
+<!-- pagina de Category -->
+   <definition name="categoryPage" extends="base.definition">  
+       <put-attribute name="title" value="Error" />  
+       <put-attribute name="body" value="/WEB-INF/bodyfragments/_category.jsp" />  
+   </definition> 
+   <!-- pagina de product -->
+   <definition name="productPage" extends="base.definition">  
+       <put-attribute name="title" value="Error" />  
+       <put-attribute name="body" value="/WEB-INF/bodyfragments/_product.jsp" />  
+   </definition> 
+</tiles-definitions>
