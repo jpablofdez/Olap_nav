@@ -12,6 +12,10 @@
 	<script src="<c:url value="/js/bootstrap-select.js" />"></script>
 	<script src="<c:url value="/js/i18n/defaults-*.js" />"></script>   
 	<script type="text/javascript" src="<c:url value="/js/bootstrap-datetimepicker.js" />"></script>   
+	
+
+	<script src="https://cdn.flexmonster.com/2.3/flexmonster.js"></script>
+
 	<link href="<c:url value="/css/bootstrap.min.css" />" rel="stylesheet">
 	<link href="<c:url value="/css/bootstrap-datetimepicker.css" />" rel="stylesheet">
 	<link href="<c:url value="/css/bootstrap-select.min.css" />" rel="stylesheet">  

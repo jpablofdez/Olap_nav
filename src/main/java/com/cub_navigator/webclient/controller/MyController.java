@@ -1,4 +1,4 @@
-package com.fastfood.webclient.controller;
+package com.cub_navigator.webclient.controller;
 
 import java.util.Map;
 
@@ -14,16 +14,12 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-
-import com.fastfood.webclient.form.Category;
-import com.fastfood.webclient.form.Product;
-import com.fastfood.webclient.form.Restaurant;
-import com.fastfood.webclient.form.Users;
-import com.fastfood.webclient.service.CategoryService;
-import com.fastfood.webclient.service.ProductService;
-import com.fastfood.webclient.service.RestaurantService;
-import com.fastfood.webclient.service.UserService;
+import com.cub_navigator.webclient.form.Category;
+import com.cub_navigator.webclient.form.Product;
+import com.cub_navigator.webclient.form.Users;
+import com.cub_navigator.webclient.service.CategoryService;
+import com.cub_navigator.webclient.service.ProductService;
+import com.cub_navigator.webclient.service.UserService;
 
  
 @Controller
@@ -36,8 +32,6 @@ public class MyController {
 	@Autowired
 	private CategoryService catService;
 	@Autowired
-	private RestaurantService restService;
-	@Autowired
 	private ProductService productService;
 	Category category;
 	
@@ -48,22 +42,12 @@ public class MyController {
 		return catService;
 	}
 
-
 	public void setCatService(CategoryService catService) {
 		this.catService = catService;
 	}
 
 	public void setUserService(UserService userService) {
 		this.userService = userService;
-	}
-	
-	public RestaurantService getRestService() {
-		return restService;
-	}
-
-
-	public void setRestService(RestaurantService restService) {
-		this.restService = restService;
 	}
 
    @RequestMapping(value = { "/", "/home" }, method = RequestMethod.GET)
@@ -77,18 +61,32 @@ public class MyController {
 	   }
        return entrada;
    }
-   @RequestMapping(value = {"/restaurant" }, method = RequestMethod.GET)
-   public String restaurantPage(Map<String, Object> map) {
+   
+   @RequestMapping(value = {"/dw_cub" }, method = RequestMethod.GET)
+   public String dw_cub_Page(Map<String, Object> map) {
 	   String entrada ="";
 	   if(flagIn){
-		   map.put("restaurant", new Restaurant());
-	  		map.put("restaurantList", restService.listRestaurant());
-	   		entrada = "restaurantPage";
+		  // map.put("restaurant", new Restaurant());
+	  		//map.put("restaurantList", restService.listRestaurant());
+	   		entrada = "dw_cub_Page";
 	   }else{
 		   entrada = "autentic";
 	   }
        return entrada;
    }
+   @RequestMapping(value = {"/dw_analytics" }, method = RequestMethod.GET)
+   public String dw_analytics_Page(Map<String, Object> map) {
+	   String entrada ="";
+	   if(flagIn){
+		  // map.put("restaurant", new Restaurant());
+	  		//map.put("restaurantList", restService.listRestaurant());
+	   		entrada = "dw_analytics_Page";
+	   }else{
+		   entrada = "autentic";
+	   }
+       return entrada;
+   }
+  
    @RequestMapping(value = {"/category" }, method = RequestMethod.GET)
    public String categoryPage(Map<String, Object> map) {
 	   String entrada ="";
@@ -101,26 +99,7 @@ public class MyController {
 	   }
        return entrada;
    }
-   
-   @RequestMapping(value = "/addRestaurant", method = RequestMethod.POST)
- 	public String addRestaurant(@ModelAttribute("restaurant")
- 	Restaurant restaurant, BindingResult result) {
 
- 	   restService.addRestaurant(restaurant);
-
- 		return "redirect:/restaurant";
- 	}
-   
-   @RequestMapping("/deleteRestaurant/{id_restaurant}")
- 	public String deleteRestaurant(@PathVariable("id_restaurant")
- 	Long id_restaurant) {
-
-	   restService.removeRestaurant(id_restaurant);
-
- 		return "redirect:/restaurant";
- 	}
-   
-   
    @RequestMapping(value = { "/contactus" }, method = RequestMethod.GET)
    public String contactusPage(Model model) {
        model.addAttribute("address", "Vietnam");
@@ -203,12 +182,30 @@ public class MyController {
 	}
   
   @RequestMapping(value = "/getproduct", method = RequestMethod.POST)
-	public String getproduct(Map<String, Object> map,@ModelAttribute("category") Category category,
-	Restaurant restaurant, BindingResult result) {
+	public String getproduct(Map<String, Object> map,@ModelAttribute("category") Category category, BindingResult result) {
 	  
 	  map.put("product", new Product());
 	  map.put("productList", productService.listProductbyCategory(category));
 		return "productPage";
 	}
- 
+  
+  @RequestMapping(value = { "/enter_user" }, method = RequestMethod.GET)
+  public String enter_user(Map<String, Object> map) {
+      map.put("user", new Users());
+      return "signup";
+  }
+  
+  /****New User*****/
+  
+  @RequestMapping("/createUser")
+ 	public String createUser(Map<String, Object> map) {
+
+	   String entrada ="";
+	   map.put("user", new Users());
+	   entrada = "createUser";
+	 
+      return entrada;
+      
+ 	}
+  
 }

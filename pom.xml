@@ -5,7 +5,7 @@
   <artifactId>SpringMVCTiles</artifactId>
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
-  <name>FastFood Maven Webapp</name>
+  <name>Cub Navigator Maven Webapp</name>
   <url>http://maven.apache.org</url>
   
   <dependencies>
@@ -154,7 +154,7 @@
   </dependencies>
   
   <build>
-    <finalName>FastFood</finalName>
+    <finalName>Cub_Navigator</finalName>
     
     <plugins>
          <plugin>
@@ -173,7 +173,7 @@
              <groupId>org.apache.tomcat.maven</groupId>
              <artifactId>tomcat7-maven-plugin</artifactId>
              <version>2.2</version>
-             <!-- Config: contextPath and Port (Default - /FastFood : 8080) -->
+             <!-- Config: contextPath and Port (Default - /Cub_Navigator : 8080) -->
              <!--
                   <configuration>
                       <path>/</path>

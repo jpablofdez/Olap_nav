@@ -1,4 +1,4 @@
-package com.fastfood.webclient.form;
+package com.cub_navigator.webclient.form;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

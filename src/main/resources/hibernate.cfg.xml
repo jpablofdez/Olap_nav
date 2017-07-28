@@ -6,9 +6,8 @@
  
 <hibernate-configuration>
     <session-factory>
-         <mapping class="com.fastfood.webclient.form.Users" />
-         <mapping class="com.fastfood.webclient.form.Restaurant" />
-         <mapping class="com.fastfood.webclient.form.Category" />
+         <mapping class="com.cub_navigator.webclient.form.Users" />
+         <mapping class="com.cub_navigator.webclient.form.Category" />
     </session-factory>
 	    
 </hibernate-configuration>

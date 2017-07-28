@@ -1,6 +1,6 @@
-package org.viralpatel.contact.businessdelegate;
+package org.cub_navigator.businessdelegate;
 
-import com.fastfood.webclient.service.UserService;
+import com.cub_navigator.webclient.service.UserService;
 
 public class BusinessDelegate {
 	

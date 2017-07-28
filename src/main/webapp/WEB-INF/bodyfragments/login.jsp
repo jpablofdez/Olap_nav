@@ -11,5 +11,13 @@
           <input type="checkbox" value="remember-me"> Remember me
         </label>
    <button class="btn btn-large btn-primary" type="submit">Sign in</button>
-
+   
+   
+  
+   
 </form:form>
+
+<div>
+ <a class="navbar-link" href="${pageContext.request.contextPath}/createUser">Create a new User</a>
+ 
+</div>

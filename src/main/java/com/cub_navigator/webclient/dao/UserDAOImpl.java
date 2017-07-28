@@ -1,4 +1,4 @@
-package com.fastfood.webclient.dao;
+package com.cub_navigator.webclient.dao;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ import org.springframework.orm.hibernate3.HibernateTemplate;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.fastfood.webclient.form.Users;
+import com.cub_navigator.webclient.form.Users;
 
 @Repository
 @Transactional

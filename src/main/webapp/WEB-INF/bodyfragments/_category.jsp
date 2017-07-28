@@ -17,15 +17,12 @@
                     <img src="${initParam.productImagePath}${product.name}.png"
                          alt="<fmt:message key='${product.name}'/>">
                 </td>
-
                 <td>
                    ${product.name}
                     <br>
                     <span class="smallText">${product.name}Description</span>
                 </td>
-
                 <td>${product.price}</td>
-
                 <td>
                     <form action="<c:url value='addToCart'/>" method="post">
                         <input type="hidden"

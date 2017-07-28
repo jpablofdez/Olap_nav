@@ -1,4 +1,4 @@
-package org.viralpatel.contact.businessdelegate;
+package org.cub_navigator.businessdelegate;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;

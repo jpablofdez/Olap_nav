@@ -1,8 +1,8 @@
-package com.fastfood.webclient.dao;
+package com.cub_navigator.webclient.dao;
 
 import java.util.List;
 
-import com.fastfood.webclient.form.Category;
+import com.cub_navigator.webclient.form.Category;
 
 public interface CategoryDAO {
 	

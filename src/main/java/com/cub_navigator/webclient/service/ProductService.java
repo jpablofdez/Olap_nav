@@ -1,8 +1,9 @@
-package com.fastfood.webclient.service;
+package com.cub_navigator.webclient.service;
 
 import java.util.List;
-import com.fastfood.webclient.form.Category;
-import com.fastfood.webclient.form.Product;
+
+import com.cub_navigator.webclient.form.Category;
+import com.cub_navigator.webclient.form.Product;
 
 public interface ProductService {
 	
