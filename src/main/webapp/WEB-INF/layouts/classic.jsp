@@ -4,6 +4,7 @@
 <head>
 	<title><tiles:getAsString name="title" /></title>	
 	<link href="<c:url value="/css/main.css" />" rel="stylesheet">
+	
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script type="text/javascript" src="<c:url value="/js/moment.min.js" />"></script>
 	<script type="text/javascript" src="<c:url value="/js/transition.js" />"></script>
@@ -21,8 +22,17 @@
 	<link href="<c:url value="/css/bootstrap-select.min.css" />" rel="stylesheet">  
 	
 	<link href="<c:url value="/css/affablebean.css" />" rel="stylesheet"> 
-		  
-	
+	<link href="<c:url value="/css/orb.css" />" rel="stylesheet"> 
+	<script src="<c:url value="/js/react-0.12.2.js" />"></script>
+	<script src="<c:url value="/js/orb.js" />"></script>
+	<script src="<c:url value="/js/demo.data.js" />"></script>
+	 
+    <style type="text/css">
+    body {        
+        font-size: 1.2em;
+    }
+    </style>
+    
 	<style type="text/css">
 		body {
 			font-family: sans-serif;
