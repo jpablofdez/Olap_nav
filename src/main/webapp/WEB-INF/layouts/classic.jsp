@@ -22,16 +22,24 @@
 	<link href="<c:url value="/css/bootstrap-select.min.css" />" rel="stylesheet">  
 	
 	<link href="<c:url value="/css/affablebean.css" />" rel="stylesheet"> 
-	<link href="<c:url value="/css/orb.css" />" rel="stylesheet"> 
-	<script src="<c:url value="/js/react-0.12.2.js" />"></script>
-	<script src="<c:url value="/js/orb.js" />"></script>
-	<script src="<c:url value="/js/demo.data.js" />"></script>
-	 
-    <style type="text/css">
-    body {        
-        font-size: 1.2em;
-    }
-    </style>
+	
+	<!-- css for products -->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	
+	<!-- begin cub -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.js"></script>
+        
+        <link href="<c:url value="/css/pivot/pivot.css" />" rel="stylesheet">
+		<script src="<c:url value="/js/pivot/jquery-ui.min.js" />"></script>
+		<script src="<c:url value="/js/pivot/pivot.js" />"></script>
+		<script src="<c:url value="/js/pivot/d3_renderers.js" />"></script>
+		<script src="<c:url value="/js/pivot/c3_renderers.js" />"></script>
+		<script src="<c:url value="/js/pivot/export_renderers.js" />"></script>
+	 <!-- end cub -->
     
 	<style type="text/css">
 		body {

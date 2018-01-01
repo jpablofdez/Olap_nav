@@ -74,6 +74,18 @@ public class MyController {
 	   }
        return entrada;
    }
+   @RequestMapping(value = {"/dw_products" }, method = RequestMethod.GET)
+   public String dw_products_Page(Map<String, Object> map) {
+	   String entrada ="";
+	   if(flagIn){
+		  // map.put("restaurant", new Restaurant());
+	  		//map.put("restaurantList", restService.listRestaurant());
+	   		entrada = "dw_products_Page";
+	   }else{
+		   entrada = "autentic";
+	   }
+       return entrada;
+   }
    @RequestMapping(value = {"/dw_analytics" }, method = RequestMethod.GET)
    public String dw_analytics_Page(Map<String, Object> map) {
 	   String entrada ="";

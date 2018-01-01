@@ -55,7 +55,11 @@
        <put-attribute name="title" value="Error" />  
        <put-attribute name="body" value="/WEB-INF/bodyfragments/Error_page.jsp" />  
    </definition> 
-   
+    <!-- page DataWarehouse Products Analytics -->
+   <definition name="dw_products_Page" extends="base.definition">  
+       <put-attribute name="title" value="Error" />  
+       <put-attribute name="body" value="/WEB-INF/bodyfragments/_dw_products.jsp" />  
+   </definition> 
    <!-- page DataWarehouse Cubs -->
    <definition name="dw_cub_Page" extends="base.definition">  
        <put-attribute name="title" value="Error" />  
