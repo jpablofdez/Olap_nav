@@ -32,6 +32,8 @@ public class MyController {
 	@Autowired
 	private CategoryService catService;
 	@Autowired
+	private CategoryService serService;
+	@Autowired
 	private ProductService productService;
 	Category category;
 	
@@ -106,6 +108,18 @@ public class MyController {
 		   map.put("category", new Category());
 	  		map.put("categoryList", catService.listCategory());
 	   		entrada = "categoryPage";
+	   }else{
+		   entrada = "autentic";
+	   }
+       return entrada;
+   }
+   @RequestMapping(value = {"/services" }, method = RequestMethod.GET)
+   public String servicePage(Map<String, Object> map) {
+	   String entrada ="";
+	   if(flagIn){
+		  // map.put("services", new Category());
+	  	//	map.put("serviceList", serService.listCategory());
+	   		entrada = "servicePage";
 	   }else{
 		   entrada = "autentic";
 	   }
